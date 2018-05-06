@@ -1,7 +1,7 @@
 <?php
 
 $config = [
-    'api' => 'api.yoursynergycp.com',
+    'api' => 'api.cp.example.org',
     'key' => '',
 ];
 
