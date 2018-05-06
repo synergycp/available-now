@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+bower_components
+sftp-config.json
+_build
+__MACOSX
+npm-debug.log
+.idea
+style.css
+style.min.css

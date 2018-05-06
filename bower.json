@@ -1,0 +1,27 @@
+{
+  "name": "SynergyCP Available Now",
+  "version": "1.0.0",
+  "authors": [
+    "SynergyCP <synergycp.com>"
+  ],
+  "description": "List of servers available for instant provisioning via SynergyCP",
+  "main": "app.js",
+  "keywords": [
+    "SynergyCP"
+  ],
+  "license": "MIT",
+  "homepage": "https://synergycp.com",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.13",
+    "angular-route": "~1.3.13",
+    "angular-sanitize": "~1.3.13"
+  }
+}

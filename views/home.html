@@ -1,0 +1,30 @@
+<div ng-repeat="(groupId, data) in ctr.serverGroups" class="server-group">
+    <div class="t-c">
+        <h2 class="title">{{data.group.name}}</h2>
+    </div>
+    <div class="divTable m-t-md">
+        <div class="divTableHeading">
+            <div class="divTableRow">
+                <div class="divTableHead">CPU</div>
+                <div class="divTableHead">Memory</div>
+                <div class="divTableHead">Disks</div>
+                <!--<div class="divTableHead">Addons</div>-->
+                <div class="divTableHead">Count</div>
+            </div>
+        </div>
+        <div class="divTableBody">
+            <div class="divTableRow" ng-repeat="countData in data.serversCountData">
+                <div class="divTableCell">{{countData.server.cpu.name}}</div>
+                <div class="divTableCell">{{countData.server.mem.name}}</div>
+                <div class="divTableCell">
+                    <div class="hdds" ng-repeat="hdd in countData.server.hdd_counts">
+                        <span ng-if="hdd.key > 1">{{hdd.key}}x</span>
+                        <span>{{hdd.value}}</span>
+                    </div>
+                </div>
+                <!--<div class="divTableCell">{{}}</div>-->
+                <div class="divTableCell">{{countData.count}}</div>
+            </div>
+        </div>
+    </div>
+</div>
