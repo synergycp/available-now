@@ -212,7 +212,7 @@ gulp.task('templates', function() {
     ])
     .pipe($.minifyHtml())
     .pipe($.angularTemplatecache({
-      module: 'boilerplate'
+      module: 'dedicatedServers'
     }))
     .pipe(gulp.dest('_build/js'));
 });
