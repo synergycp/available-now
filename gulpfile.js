@@ -63,10 +63,9 @@ gulp.task('minify-js', function() {
 // minify CSS
 gulp.task('minify-css', function() {
   gulp.src(['./styles/**/*.css', '!./styles/**/*.min.css'])
-    .pipe($.rename({suffix: '.min'}))
+    //.pipe($.rename({suffix: '.min'}))
     .pipe($.minifyCss({keepBreaks:true}))
-    .pipe(gulp.dest('./styles/'))
-    .pipe(gulp.dest('./_build/css/'));
+    .pipe(gulp.dest('./styles/'));
 });
 
 // minify HTML
@@ -147,8 +146,6 @@ gulp.task('sass', function() {
 
 // SASS Build task
 gulp.task('sass:build', function() {
-  var s = $.size();
-
   return gulp.src('styles/style.scss')
     .pipe($.sass({
       style: 'compact'
@@ -164,20 +161,7 @@ gulp.task('sass:build', function() {
         /\.owl-prev/
       ]
     }))
-    .pipe($.minifyCss({
-      keepBreaks: true,
-      aggressiveMerging: false,
-      advanced: false
-    }))
-    .pipe($.rename({suffix: '.min'}))
-    .pipe(gulp.dest('_build/css'))
-    .pipe(s)
-    .pipe($.notify({
-      onLast: true,
-      message: function() {
-        return 'Total CSS size ' + s.prettySize;
-      }
-    }));
+    .pipe(gulp.dest('styles'));
 });
 
 // BUGFIX: warning: possible EventEmitter memory leak detected. 11 listeners added.
