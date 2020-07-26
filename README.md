@@ -1,11 +1,15 @@
 ## Install
 
-Edit the `$config` variable in `server/servers.php` to include the host name of the SynergyCP API (e.g. api.cp.example.org) and an API Key of a SynergyCP Integration that has read access to Servers in Inventory.
-
 Run the following on the command line (make sure git, npm, and gulp are installed):
+
 ```bash
 git clone git@github.com:synergycp/available-now.git
 cd available-now
+```
+
+Edit the `$config` variable in `server/servers.php` to include the host name of the SynergyCP API (e.g. api.cp.example.org) and an API Key of a SynergyCP Integration that has read access to Servers in Inventory. Then compile the changes:
+
+```bash
 npm i
 gulp build
 ```

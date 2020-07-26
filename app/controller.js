@@ -92,7 +92,7 @@
     for (var i = 0; i < disks1.length; i++) {
       var isCurInDisks2 = false;
       for (var j = 0; j < disks2.length; j++) {
-        if(disks1[i].value == disks2[j].value) {
+        if(disks1[i].value === disks2[j].value && disks1[i].key === disks2[i].key) {
           isCurInDisks2 = true;
           break;
         }
